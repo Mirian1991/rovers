@@ -25,18 +25,21 @@
 
   .header-first { 
     width: 100%;
-    border: 2px solid red;
+    min-height: 50px;
+    border: 1px solid red;
   }
 
   .header-second { 
     width: 100%;
-    border: 2px solid red;
+    min-height: 50px;
+    border: 1px solid red;
   }
 
   
   .header-third { 
     width: 100%;
-    border: 2px solid red;
+    min-height: 50px;
+    border: 1px solid red;
   }
 
   
