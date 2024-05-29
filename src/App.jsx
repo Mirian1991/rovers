@@ -7,7 +7,7 @@ export const App = () => {
   return (
    <>
       <Header/>
-      <Homepage/>
+      <Homepage/> 
       <Footer/>
 
    </>

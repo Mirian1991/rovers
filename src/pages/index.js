@@ -1,1 +1,1 @@
-export* from "./homepage" ;
+export {Homepage} from "../pages/homepage/Homepage";

@@ -1,11 +1,8 @@
 
 
-const Homepage = () => {
+export const Homepage = () => {
 
     return (
-
-        <>
-        
-        </>
+        <div></div>
     );
 }
