@@ -1,7 +1,7 @@
 .searchbox {
   position: relative;
-  width: 500px;
-  height: 40px;
+  width: 700px;
+  height: 50px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -14,13 +14,14 @@
   height: 100%;
   padding: 10px;
   padding-right: 40px; /* Ensure text doesn't overlap the icon */
-  border-radius: 20px;
-  border: solid 1px #223582;
+  border-radius: 10px;
+  border: solid 2px #223582;
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .search-icon {
-  color: #671d1d;
+   
+  color: #dddddd;
   width: 20px;
   height: 20px;
 }
@@ -34,9 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius:   15px 15px 0; /* Match border-radius of input */
+  width: 60px;
+  height: 50px;
+  border-radius: 0 15px 15px 0; /* Match border-radius of input */
 }
-
-

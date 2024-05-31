@@ -2,10 +2,13 @@
     /* position: fixed; */
     /* top: 0;
     left: 0; */
-   
-    padding: 7px 10px;
+   max-width: 1200px;
+   width: 100%;
+    /* padding: 7px 10px; */
+    
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
     align-items:center;
@@ -23,15 +26,25 @@
     
   }
 
+  .main-logo { 
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            padding: 0 auto;
+          margin-top: 10px;
+  }
+
    
 
   .header-first { 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
     width: 100%;
     min-height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .header-logo {
@@ -48,7 +61,7 @@
   .header-second { 
     width: 100%;
     min-height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   

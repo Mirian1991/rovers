@@ -4,8 +4,10 @@ import "./global/reset.css"
 import './index.css';
 import "./components/header/header.css";
 import "./components/footer/footer.css";
-import "./components/header/headercomponents/searchbar.css";
-import "./components/header/headercomponents/login.css";
+import "./pages/searchbar/searchbar.css";
+import "./pages/login/login.css";
+import "./pages/basket/basket.css";
+import "./global/changelangs/changelangs.css";
 import {App} from './App';
  
 

@@ -1,6 +1,9 @@
-import {Searchbar} from "./headercomponents/Searchbar";
-import { Login}    from "./headercomponents/Login";
-import basket from '../../global/Images/headericons/basket.svg.svg';
+import {Searchbar}     from "../../pages/searchbar/Searchbar";
+import { Login}        from "../../pages/login/Login";
+import {Changelangs}   from "../../global/changelangs/Changelangs";
+
+ 
+
  
 export const Header = () =>  {
 
@@ -12,14 +15,13 @@ export const Header = () =>  {
 
             <div className="header-logo"> Rovers</div>
             <Searchbar/>
-
             <Login/>
-            <div>
-               <img src={basket} alt="My Icon" width="50" height="50" />
-               <p>basket</p>
-            </div>
+            <Changelangs/>
+             
 
          </div>
+
+          
          <div className="header-second"></div>
 
       </div>
