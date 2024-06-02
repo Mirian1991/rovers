@@ -3,6 +3,10 @@
 export const Homepage = () => {
 
     return (
-        <div></div>
+        <div className="Homepage-main">
+
+
+
+        </div>
     );
 }
