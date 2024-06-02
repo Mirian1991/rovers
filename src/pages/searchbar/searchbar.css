@@ -1,7 +1,7 @@
 .searchbox {
   position: relative;
   width: 700px;
-  height: 50px;
+  height: 45px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
   padding: 10px;
   padding-right: 40px; /* Ensure text doesn't overlap the icon */
   border-radius: 10px;
-  border: solid 2px #223582;
+  border: solid 2px #3d61ef;
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -30,12 +30,12 @@
   position: absolute;
   right: 0; /* Position icon box to the right of the search box */
   top: 0;
-  background-color: rgb(47, 20, 222);
+  background-color: rgb(90, 68, 234);
   color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60px;
-  height: 50px;
+  height: 45px;
   border-radius: 0 15px 15px 0; /* Match border-radius of input */
 }

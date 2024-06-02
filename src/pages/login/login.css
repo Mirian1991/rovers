@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding: 0 auto;
+ 
  
  
 }
@@ -16,6 +18,7 @@
   justify-content: center;
   flex-direction: column;
  
+ 
 }
 
 
@@ -27,12 +30,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #000000;
     font-size: 18px;
-    border: 1px solid;
-    background-color: #000079;
-    border-radius: 10px;
-    margin-top: 10px;
+  
+    
+     
     /* transition: ease-in-out 1s;
     border: none; */
   }

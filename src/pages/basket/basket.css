@@ -14,12 +14,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #000000;
     font-size: 18px;
-    border: 1px solid;
-    background-color: #6464be;
-    border-radius: 10px;
-    margin-top: 10px;
+   
+ 
+   
+   
     /* transition: ease-in-out 1s;
     border: none; */
   }
