@@ -10,6 +10,7 @@ export const Basket = () => {
             <a href="/basket"> 
                 <div className="basket-button"> basket </div>
             </a>
+            
         </div>
     ) ;
 

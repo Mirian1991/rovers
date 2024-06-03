@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 .basket-button{
@@ -16,10 +17,15 @@
     align-items: center;
     color: #000000;
     font-size: 18px;
-   
- 
-   
-   
+    
     /* transition: ease-in-out 1s;
     border: none; */
+  }
+
+
+  .basket-button:hover {
+
+    color: #1e47cb;
+    font-size: 21px;
+    transition: ease-in-out 0.5s;
   }

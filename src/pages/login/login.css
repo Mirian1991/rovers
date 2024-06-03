@@ -4,10 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 0 auto;
- 
- 
- 
+  padding: 0 auto; 
 }
 
 
@@ -17,11 +14,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
- 
- 
+
+   
 }
 
-
+ 
 
 .login-button {
     
@@ -31,11 +28,20 @@
     justify-content: center;
     align-items: center;
     color: #000000;
-    font-size: 18px;
-  
-    
-     
-    /* transition: ease-in-out 1s;
-    border: none; */
+    font-size: 20px;
+   
   }
   
+  
+
+  .login-button:hover { 
+
+    color: #1e47cb;
+    font-size: 21px;
+    transition: ease-in-out 0.5s;
+    
+  }
+
+ 
+  
+ 

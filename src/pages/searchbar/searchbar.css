@@ -15,7 +15,7 @@
   padding: 10px;
   padding-right: 40px; /* Ensure text doesn't overlap the icon */
   border-radius: 10px;
-  border: solid 2px #3d61ef;
+  border: solid 2px #c5c52c;
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -30,7 +30,7 @@
   position: absolute;
   right: 0; /* Position icon box to the right of the search box */
   top: 0;
-  background-color: rgb(90, 68, 234);
+  background-color: rgb(194, 207, 58);
   color: #ffff;
   display: flex;
   justify-content: center;

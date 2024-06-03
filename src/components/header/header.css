@@ -60,16 +60,15 @@
   }
 
   
-  .header-second { 
+  /* .header-second { 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-   
     margin: 0 auto;
     
-  }
+  } */
 
 
   .header-second-flex { 
@@ -81,4 +80,12 @@
     gap: 10px;
   }
   
-  
+  .header-second-ul { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 0 auto;
+}
+

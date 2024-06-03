@@ -24,47 +24,49 @@ export const Header = () =>  {
           
          <div className="header-second">
 
-            <div className="header-second-flex"> 
+         <ul className="header-second-ul">
+
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-              <a href=""> Test</a>
-            </div>
+              <a href=""> shoes</a>
+            </li>
             
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Test</a>
-            </div>
+                <a href=""> watches</a>
+            </li>
             
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Test</a>
-            </div>
+                <a href=""> Bags</a>
+            </li>
             
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Testiconblabla</a>
-            </div>
+                <a href=""> Dishes</a>
+            </li>
             
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Testiconblabla</a>
-            </div>
+                <a href=""> Home appliances</a>
+            </li>
             
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Testiconblabla</a>
-            </div>
+                <a href=""> Medical corner</a>
+            </li>
             
-            <div className="header-second-flex"> 
-                <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
-                <a href=""> Testiconblabla</a>
-            </div>
-            
-            <div className="header-second-flex"> 
+            <li className="header-second-flex"> 
                 <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
                 <a href=""> Testiconblabla</a>
-            </div>
+            </li>
             
+            <li className="header-second-flex"> 
+                <img src= {testicon} alt="testicon"  width= "20px"  height= "20px"/> 
+                <a href=""> Testiconblabla</a>
+            </li>
             
+         </ul>
              
             
 
