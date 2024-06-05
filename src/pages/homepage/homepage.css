@@ -1,0 +1,16 @@
+.Main-Homepage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1280px;
+    width: 100%;
+    min-height: 50px;
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+ 
+ 
+    background-color: rgb(235, 235, 235);
+  }
+
+  

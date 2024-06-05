@@ -1,5 +1,5 @@
 import { Header,Footer} from "./components"
-import { Homepage} from "./pages/homepage/Homepage";
+import { Homepage } from "./pages";
 
 
 export const App = () => {
@@ -7,7 +7,7 @@ export const App = () => {
   return (
    <>
       <Header/>
-      <Homepage/> 
+      <Homepage/>
       <Footer/>
 
    </>

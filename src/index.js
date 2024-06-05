@@ -9,6 +9,10 @@ import "./pages/login/login.css";
 import "./pages/basket/basket.css";
 import "./global/changelangs/changelangs.css";
 import "./pages/homepage/homepage.css";
+import "./pages/section1/sectionone.css";
+import "./pages/section2/sectiontwo.css";
+import "./pages/section3/sectionthree.css";
+
 import {App} from './App';
  
 
