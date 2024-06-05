@@ -12,6 +12,13 @@ import "./pages/homepage/homepage.css";
 import "./pages/section1/sectionone.css";
 import "./pages/section2/sectiontwo.css";
 import "./pages/section3/sectionthree.css";
+import "./pages/notfoundpage/notfoundpage.css";
+import "./pages/aboutuspage/aboutuspage.css";
+import "./pages/questionpage/questionpage.css";
+import "./pages/privecypage/privecypage.css";
+import "./pages/deliverypage/deliverypage.css";
+import "./pages/helppage/helppage.css";
+import "./pages/contactuspage/contactuspage.css";
 
 import {App} from './App';
  

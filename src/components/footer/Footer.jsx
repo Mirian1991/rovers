@@ -17,12 +17,12 @@ export const Footer = () =>  {
         
           <div className='footer-first'>
               <ul>
-                <li className='footer-first-flex'> <img src= {aboutusicon} alt="aboutus" width= "15px" height="15px" /> <a href="">  About us </a> </li>
-                <li className='footer-first-flex'> <img src= {questionicon} alt="question"  width= "15px" height="15px"  /> <a href="">  Frequently Asked Questions  </a> </li> 
-                <li className='footer-first-flex'> <img src= {privacyicon} alt="privacy"  width= "20px" height="20px"  /> <a href="">  Privacy    </a> </li>
-                <li className='footer-first-flex'> <img src= {deliveryicon} alt="delivery"  width= "20px" height="20px"  /><a href="">  Purchase/Delivery           </a> </li>
-                <li className='footer-first-flex'> <img src= {helpicon} alt="help"  width= "20px" height="20px"  /> <a href="">  Help       </a> </li>
-                <li className='footer-first-flex'>  <img src={contactusicon} alt="contact us"  width= "20px" height="20px"  />  <a href="">  Contact us </a> </li>
+                <li className='footer-first-flex'> <img src= {aboutusicon} alt="aboutus" width= "15px" height="15px" /> <a href="/Aboutus">  About us </a> </li>
+                <li className='footer-first-flex'> <img src= {questionicon} alt="question"  width= "15px" height="15px"  /> <a href="/Question">  Frequently Asked Questions  </a> </li> 
+                <li className='footer-first-flex'> <img src= {privacyicon} alt="privacy"  width= "20px" height="20px"  /> <a href="/Privecy">  Privacy    </a> </li>
+                <li className='footer-first-flex'> <img src= {deliveryicon} alt="delivery"  width= "20px" height="20px"  /><a href="/Delivery">  Purchase/Delivery           </a> </li>
+                <li className='footer-first-flex'> <img src= {helpicon} alt="help"  width= "20px" height="20px"  /> <a href="/Help">  Help       </a> </li>
+                <li className='footer-first-flex'>  <img src={contactusicon} alt="contact us"  width= "20px" height="20px"  />  <a href="/Contactus">  Contact us </a> </li>
                 
               </ul>
 
@@ -42,7 +42,7 @@ export const Footer = () =>  {
           <div className='footer-second'>
            
 
-              <div className="header-logo"> Rovers</div>
+          <a href="/" className="header-logo">rovers</a>
 
            </div>
            

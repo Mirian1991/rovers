@@ -20,7 +20,7 @@ export const Header = () =>  {
           
          <div className="header-first">
 
-            <div className="header-logo"> Rovers</div>
+            <a href="/" className="header-logo">rovers</a>
             <Searchbar/>
             <Login/>
             <Changelangs/>
