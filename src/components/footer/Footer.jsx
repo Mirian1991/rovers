@@ -25,6 +25,13 @@ export const Footer = () =>  {
                 <li className='footer-first-flex'>  <img src={contactusicon} alt="contact us"  width= "20px" height="20px"  />  <a href="">  Contact us </a> </li>
                 
               </ul>
+
+              <a className="footer-logo" href="https://www.facebook.com/RoversSneakers/" target="_blank">
+
+            <img src= {facebookicon} alt="facebook"  width= "30px" height="30px"/>
+                 </a>
+
+              
            </div>
            
 
@@ -32,18 +39,12 @@ export const Footer = () =>  {
              
 
              
-
+          <div className='footer-second'>
            
 
-           <div className="header-logo"> Rovers</div>
-           
+              <div className="header-logo"> Rovers</div>
 
-           <a className="footer-logo" href="https://www.facebook.com/RoversSneakers/" target="_blank">
-
-            <img src= {facebookicon} alt="facebook"  width= "30px" height="30px"/>
-                 </a>
-
-            
+           </div>
            
           
         </div>
