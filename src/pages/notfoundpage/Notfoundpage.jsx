@@ -10,7 +10,7 @@ export const Notfoundpage = () => {
 
             <div className="Notfound-flex">
                <div className="Notfound-404"> 404  </div>
-               <h3> Page Not Found</h3>
+               <h3> Error Page Not Found</h3>
                <p>  We couldn't find this page </p>
                <Link to="/" className="Homepage-link"> Homepage </Link> 
 

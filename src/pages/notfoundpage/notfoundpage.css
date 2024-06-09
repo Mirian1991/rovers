@@ -50,7 +50,7 @@
     font-size: 120px;
     font-weight: 100;
     color: #fb0606;
-    animation: color-change 4s infinite;
+    animation: color-change 3s infinite;
 
 
     
@@ -71,12 +71,12 @@
   
     font-size: 25px;
     color: #000000;
-    animation: color-change 4s infinite;
+    /* animation: color-change 4s infinite; */
     
   
 }
 
-@keyframes color-change {
+/* @keyframes color-change {
     100% { color: #fb0606; }
     75% { color: #00ff00; }
     50% { color: #0000ff; }
@@ -87,7 +87,7 @@
   
    
   
-}
+} */
 
 
 .Notfound-flex, h3 { 
