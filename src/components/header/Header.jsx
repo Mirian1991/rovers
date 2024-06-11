@@ -9,7 +9,7 @@ import homeappliancesicon         from "../../global/Images/headericons/applianc
 import medicalicon                from "../../global/Images/headericons/medical.svg";
 import smartphoneicon             from "../../global/Images/headericons/smartphone.svg";
 import toolsicon                  from "../../global/Images/headericons/tools.svg";
- 
+import Mainlogo                   from "../../global/Images/main-logo/rovers.svg";
 
  
 export const Header = () =>  {
@@ -19,8 +19,8 @@ export const Header = () =>  {
 
           
          <div className="header-first">
-
-            <a href="/" className="header-logo">rovers</a>
+ 
+            <a href="/" className="header-logo"> rovers </a>
             <Searchbar/>
             <Login/>
             <Changelangs/>

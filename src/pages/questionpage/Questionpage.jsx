@@ -3,6 +3,8 @@
 export const Questionpage = () => {
 
     return ( 
-        <div></div>
+        <div className="Main-questionpage">
+            <div className="Questionpage-section"> </div>
+        </div>
     );
 }

@@ -3,6 +3,10 @@
 export const Helppage = () => {
 
     return (
-        <div></div>
+        <div className="Main-helppage">
+            <div className="Helppage-section">
+
+            </div>
+        </div>
     );
 }

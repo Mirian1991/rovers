@@ -3,6 +3,8 @@
 export const Privecypage = () => {
 
     return (
-        <div></div>
+        <div className="Main-privacypage">
+            <div className="Privacypage-section"></div>
+        </div>
     );
 }

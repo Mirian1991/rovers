@@ -3,6 +3,10 @@
 export const Contactuspage = () => {
 
     return (
-        <div></div>
+        <div className="Main-contactpage">
+            <div className="Contactpage-section">
+
+            </div>
+        </div>
     );
 }
