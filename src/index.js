@@ -19,6 +19,7 @@ import "./pages/privecypage/privecypage.css";
 import "./pages/deliverypage/deliverypage.css";
 import "./pages/helppage/helppage.css";
 import "./pages/contactuspage/contactuspage.css";
+import "./pages/categories/categories.css";
 
 
 import {App} from './App';
