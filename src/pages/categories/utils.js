@@ -3,6 +3,6 @@ export const buildCategoryTree = (categories, parentId = "0") => {
         .filter(category => category.parent_id === parentId)
         .map(category => ({
             ...category,
-            children: buildCategoryTree(categories, category.id)
+            children: buildCategoryTree(categories, category.id )
         }));
 };

@@ -1,4 +1,10 @@
 /* General styles */
+
+.categories-modal {
+    display: flex;
+    flex-direction: row;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
