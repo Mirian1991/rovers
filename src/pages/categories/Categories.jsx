@@ -1,29 +1,41 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import categoriesData from "../../global/product_categories.json";
 import { buildCategoryTree } from './utils';
 import { CategoryItem } from './CategoryItem';
+import { useCategories } from '../../global/CategoriesContext';
 
 export const Categories = () => {
-    const [openCategory, setOpenCategory] = useState(null);
+    const { isDropdownOpen, toggleCategories } = useCategories();
     const categoryTree = buildCategoryTree(categoriesData);
     const dropdownRef = useRef(null);
+    const [openCategories, setOpenCategories] = useState({});
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setOpenCategory(null); // Close the dropdown if the click is outside
+                toggleCategories(); // Close dropdown when clicking outside
             }
         };
 
-        document.addEventListener('mousedown', handleClickOutside);
+        if (isDropdownOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [dropdownRef]);
+    }, [isDropdownOpen, toggleCategories]);
 
     const handleCategoryClick = (categoryId) => {
-        setOpenCategory(openCategory === categoryId ? null : categoryId);
+        setOpenCategories(prevOpenCategories => ({
+            ...prevOpenCategories,
+            [categoryId]: !prevOpenCategories[categoryId]
+        }));
     };
+
+    if (!isDropdownOpen) return null;
 
     return (
         <div className="categories-modal" ref={dropdownRef}>
@@ -32,7 +44,7 @@ export const Categories = () => {
                     <CategoryItem
                         key={category.id}
                         category={category}
-                        openCategory={openCategory}
+                        isOpen={!!openCategories[category.id]} // Check if category is open
                         onCategoryClick={handleCategoryClick}
                     />
                 ))}
