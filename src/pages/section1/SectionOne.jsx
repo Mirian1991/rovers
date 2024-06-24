@@ -1,12 +1,3 @@
-
-
-export  const SectionOne = ( ) => {
-
-    return ( 
-
-        <div className="Main-SectionOne">
-
-            
-        </div>
-    )
-}
+export const SectionOne = () => {
+  return <div className="Main-SectionOne"></div>;
+};

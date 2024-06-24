@@ -1,10 +1,3 @@
-
-
 export const SectionTwo = () => {
-
-    return (
-        <div className="Main-SectionTwo">
-
-        </div>
-    )
-}
+  return <div className="Main-SectionTwo"></div>;
+};

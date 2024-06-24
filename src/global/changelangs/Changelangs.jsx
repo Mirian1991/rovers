@@ -1,10 +1,7 @@
-
-
 export const Changelangs = () => {
-
-    return (
-        <div>
-            <button> EN </button>
-        </div>
-    );
-}
+  return (
+    <div>
+      <button> EN </button>
+    </div>
+  );
+};
