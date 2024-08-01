@@ -1,54 +1,98 @@
-import React, { useRef, useEffect, useState } from "react";
-import categoriesData from "../../global/product_categories.json";
-import { buildCategoryTree } from "./utils";
-import { CategoryItem } from "./CategoryItem";
-import { useCategories } from "../../global/CategoriesContext";
+// import React, { useRef, useEffect, useState } from "react";
+// import categoriesData from "../../global/product_categories.json";
+// import { buildCategoryTree } from "./utils";
+// import { CategoryItem } from "./CategoryItem";
+// import { useCategories } from "../../global/CategoriesContext";
+
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Categories = () => {
-  const { isDropdownOpen, toggleCategories } = useCategories();
-  const categoryTree = buildCategoryTree(categoriesData);
-  const dropdownRef = useRef(null);
-  const [openCategories, setOpenCategories] = useState({});
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        toggleCategories(); // Close dropdown when clicking outside
-      }
-    };
-
-    if (isDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isDropdownOpen, toggleCategories]);
-
-  const handleCategoryClick = (categoryId) => {
-    setOpenCategories((prevOpenCategories) => ({
-      ...prevOpenCategories,
-      [categoryId]: !prevOpenCategories[categoryId],
-    }));
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
   };
 
-  if (!isDropdownOpen) return null;
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
 
   return (
-    <div className="categories-modal" ref={dropdownRef}>
-      <div className="category-dropdown">
-        {categoryTree.map((category) => (
-          <CategoryItem
-            key={category.id}
-            category={category}
-            isOpen={!!openCategories[category.id]} // Check if category is open
-            onCategoryClick={handleCategoryClick}
-          />
-        ))}
-      </div>
+    <div
+      className={`dropdown me-3 d-none d-lg-block ${
+        dropdownOpen ? "show" : ""
+      }`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button
+        className="btn btn-primary px-6"
+        type="button"
+        id="dropdownMenuButton1"
+        aria-expanded={dropdownOpen}
+      >
+        <span className="me-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="feather feather-grid"
+          >
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </span>
+        All Departments
+      </button>
+      <ul
+        className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}
+        aria-labelledby="dropdownMenuButton1"
+      >
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Dairy, Bread & Eggs
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Snacks & Munchies
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Fruits & Vegetables
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Cold Drinks & Juices
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Breakfast & Instant Food
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Bakery & Biscuits
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="pages/shop-grid.html">
+            Chicken, Meat & Fish
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

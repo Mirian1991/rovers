@@ -1,112 +1,100 @@
 .header-container {
-   
-   /* max-width: 1280px; */
- 
-   width: 100%;
-   margin: 0 auto;
-    
-    
-    
-    display: flex;
-    justify-content: space-between;
-    
-    flex-direction: column;
-    align-items: center;
-    align-items:center;
-    transition: 0.5s;
-    z-index: 1000;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-    
-    background: rgb(2, 0, 36);
-     align-items: center;
-    background: linear-gradient(
-      90deg,
-      rgb(243, 243, 243) 3%,
-      rgba(255, 255, 255, 0.925) 100%,
-      rgb(255, 255, 255) 100%
-    );
-    min-height: 50px;
-    
-  }
-
-  .main-logo { 
-            width: 200px;
-            height: 50px;
-            border-radius: 20px;
-            padding: 0 auto;
-          margin-top: 10px;
-  }
-
-   
-
-  .header-first { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-    min-height: 50px;
-    /* border: 1px solid red; */
-    
-  }
-
-  .header-logo {
-    position: relative;
-    font-size: 40px;
-    text-decoration: none;
-    font-weight: 700;
-    color: #c81a1a;
-    
-    color: rgb(200, 24, 68);
-  }
-
-  
-  /* .header-second { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    margin: 0 auto;
-    
-  } */
-
-
-  .header-second-flex { 
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 15px;
-  }
-
-
-  .header-second-flex, a {
-
-    color: #000000;
-  }
-
-
-  .header-second-flex, a:hover { 
-
-    color: #4412c3;
-    transition: ease-in-out 0.2s;
-  }
-  
-  .header-second-ul { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+     90deg,
+     rgb(243, 243, 243) 3%,
+     rgba(255, 255, 255, 0.925) 100%,
+     rgb(255, 255, 255) 100%
+  );
+  min-height: 50px;
 }
 
+.main-logo { 
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.header-first { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 50px;
+}
+
+.header-logo {
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(200, 24, 68);
+}
+
+.header-second-flex { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+.header-second-flex a {
+  color: #000000;
+}
+
+.header-second-flex a:hover { 
+  color: #4412c3;
+  transition: ease-in-out 0.2s;
+}
+
+.header-second-ul { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 0 auto;
+}
+
+/* login & Basket flex */
+.main-logo-basket { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* Changed from center to space-between */
+  gap: 5px;  /* Added gap to create space between login and basket */
+}
+
+.login-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}

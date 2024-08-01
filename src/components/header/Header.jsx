@@ -1,6 +1,7 @@
 import React from "react";
 import { Searchbar } from "../../pages/searchbar/Searchbar";
 import { Login } from "../../pages/login/Login";
+import { Basket } from "../../pages/basket/Basket";
 import { Changelangs } from "../../global/changelangs/Changelangs";
 import { useCategories } from "../../global/CategoriesContext";
 import testicon from "../../global/Images/headericons/shoes.svg";
@@ -25,7 +26,10 @@ export const Header = () => {
           Categories
         </button>
         <Searchbar />
-        <Login />
+        <div className="main-logo-basket">
+          <Login />
+          <Basket />
+        </div>
         <Changelangs />
       </div>
       <div className="header-second">
