@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./global/reset.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 import "./components/header/header.css";
 import "./components/footer/footer.css";
@@ -19,8 +20,8 @@ import "./pages/privecypage/privecypage.css";
 import "./pages/deliverypage/deliverypage.css";
 import "./pages/helppage/helppage.css";
 import "./pages/contactuspage/contactuspage.css";
-import "./pages/categories/categories.css";
 import "./pages/createacount/createacount.css";
+ 
 
 
 import {App} from './App';

@@ -3,7 +3,8 @@ import { Searchbar } from "../../pages/searchbar/Searchbar";
 import { Login } from "../../pages/login/Login";
 import { Basket } from "../../pages/basket/Basket";
 import { Changelangs } from "../../global/changelangs/Changelangs";
-import { useCategories } from "../../global/CategoriesContext";
+import { Categories } from "./headercomponents/Categories";
+import { NavDropdown } from "./headercomponents/NavDropdown";
 import testicon from "../../global/Images/headericons/shoes.svg";
 import watchicon from "../../global/Images/headericons/watch.svg";
 import bagicon from "../../global/Images/headericons/bags.svg";
@@ -14,17 +15,13 @@ import smartphoneicon from "../../global/Images/headericons/smartphone.svg";
 import toolsicon from "../../global/Images/headericons/tools.svg";
 
 export const Header = () => {
-  const { toggleCategories } = useCategories();
-
   return (
     <div className="header-container">
       <div className="header-first">
         <a href="/" className="header-logo">
           rovers
         </a>
-        <button onClick={toggleCategories} className="category-button">
-          Categories
-        </button>
+
         <Searchbar />
         <div className="main-logo-basket">
           <Login />
@@ -32,6 +29,7 @@ export const Header = () => {
         </div>
         <Changelangs />
       </div>
+
       <div className="header-second">
         <ul className="header-second-ul">
           <li className="header-second-flex">
@@ -92,6 +90,10 @@ export const Header = () => {
             <a href="#">Tools</a>
           </li>
         </ul>
+      </div>
+      <div className="Header-third">
+        <Categories />
+        <NavDropdown />
       </div>
     </div>
   );

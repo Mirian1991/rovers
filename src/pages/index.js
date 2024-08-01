@@ -12,7 +12,5 @@ export {Privecypage}        from "../pages/privecypage/Privecypage";
 export {Deliverypage}       from "../pages/deliverypage/Deliverypage";
 export {Helppage}           from "../pages/helppage/Helppage";
 export {Contactuspage}      from "../pages/contactuspage/Contactuspage";
-export {Categories}         from "../pages/categories/Categories" ;
-export {CategoryItem}       from "../pages/categories/CategoryItem";
 export {CreateAccount}      from "../pages/createacount/Createacountpage";
 

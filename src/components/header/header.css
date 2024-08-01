@@ -98,3 +98,11 @@
 .login-button:hover {
   background-color: #45a049;
 }
+
+.Header-third { 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}

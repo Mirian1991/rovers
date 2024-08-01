@@ -1,11 +1,4 @@
-// import React, { useRef, useEffect, useState } from "react";
-// import categoriesData from "../../global/product_categories.json";
-// import { buildCategoryTree } from "./utils";
-// import { CategoryItem } from "./CategoryItem";
-// import { useCategories } from "../../global/CategoriesContext";
-
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Categories = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
