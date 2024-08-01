@@ -195,9 +195,9 @@ export const NavDropdown = () => {
                   dropdownState.megaMenu ? "show" : ""
                 }`}
               >
-                <div className="row p-2 p-lg-4">
-                  <div className="col-lg-3 col-6 mb-4 mb-lg-0">
-                    <h6 className="text-primary ps-3">Dairy, Bread & Eggs</h6>
+                <div className="row p-4 p-lg-6">
+                  <div className="col-lg-8 col-4 mb-4 mb-lg-8">
+                    <h6 className="text-primary ps-0">Dairy, Bread & Eggs</h6>
                     <a className="dropdown-item" href="pages/shop-grid.html">
                       Butter
                     </a>
