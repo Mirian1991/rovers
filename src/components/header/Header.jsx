@@ -1,7 +1,7 @@
 import React from "react";
 import { Searchbar } from "../../pages/searchbar/Searchbar";
 import { Login } from "../../pages/login/Login";
-import { Basket } from "../../pages/basket/Basket";
+import { Basket } from "./headercomponents/Basket";
 import { Changelangs } from "../../global/changelangs/Changelangs";
 import { Categories } from "./headercomponents/Categories";
 import { NavDropdown } from "./headercomponents/NavDropdown";
