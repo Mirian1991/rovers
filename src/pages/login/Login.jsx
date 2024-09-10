@@ -72,6 +72,7 @@ export const Login = () => {
                 Create Account
               </button>
             </div>
+            <button>forgot password ?</button>
           </div>
         </div>
       </div>

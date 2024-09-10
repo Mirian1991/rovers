@@ -127,6 +127,7 @@ background-color: #4CAF50;
 color: white;
 border: none;
 border-radius: 10px;
+cursor: pointer;
 }
 
 
@@ -134,3 +135,24 @@ border-radius: 10px;
 
   background-color: #45a049;
 }
+
+.custom-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px; /* width of the vertical scrollbar */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* color of the scrollbar track */
+}
+
+
+

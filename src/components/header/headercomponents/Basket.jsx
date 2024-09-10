@@ -3,6 +3,7 @@ import basketicon from "../../../global/Images/headericons/basket.svg.svg";
 
 export const Basket = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const offcanvasRef = useRef(null);
 
   const handleShow = () => setShowOffcanvas(true);
@@ -15,15 +16,35 @@ export const Basket = () => {
       }
     };
 
+    const handleScroll = () => {
+      if (offcanvasRef.current.scrollLeft > 100) {
+        // adjust the scroll threshold as needed
+        setShowPopup(true);
+      }
+    };
+
+    const handleClickOutside = (event) => {
+      if (
+        offcanvasRef.current &&
+        !offcanvasRef.current.contains(event.target)
+      ) {
+        handleClose();
+      }
+    };
+
     const offcanvasElement = offcanvasRef.current;
     if (offcanvasElement) {
       offcanvasElement.addEventListener("mouseleave", handleMouseLeave);
+      offcanvasElement.addEventListener("scroll", handleScroll);
     }
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       if (offcanvasElement) {
         offcanvasElement.removeEventListener("mouseleave", handleMouseLeave);
+        offcanvasElement.removeEventListener("scroll", handleScroll);
       }
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showOffcanvas]);
 
@@ -58,7 +79,7 @@ export const Basket = () => {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
+        <div className="offcanvas-body custom-scroll">
           <div className="alert alert-danger" role="alert">
             You’ve got FREE delivery. Start checkout now!
           </div>
@@ -197,10 +218,7 @@ export const Basket = () => {
                       </div>
                     </div>
                     <div className="col-2 text-end">
-                      <span className="fw-bold">$20.97</span>
-                      <span className="text-decoration-line-through text-muted small">
-                        $26.97
-                      </span>
+                      <span className="fw-bold">$16.00</span>
                     </div>
                   </div>
                 </li>
@@ -289,6 +307,8 @@ export const Basket = () => {
           </a>
         </div>
       </div>
+
+      {showPopup && <div className="popup">This is a popup!</div>}
     </>
   );
 };

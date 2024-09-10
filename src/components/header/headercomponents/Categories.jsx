@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+const URL = "https://mysneakers.ge/adminold/get_product_details.php";
 
 export const Categories = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
