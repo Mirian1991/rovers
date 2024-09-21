@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from "react";
-const URL = "https://mysneakers.ge/adminold/get_product_details.php";
+import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 export const Categories = () => {
+  const [categories, setCategories] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    // Fetch categories data from the API
+    fetch("https://mysneakers.ge/adminold/get_categories.php")
+      .then((response) => response.json())
+      .then((data) => {
+        setCategories(data);
+      })
+      .catch((error) => console.error("Error fetching categories:", error));
+  }, []);
 
   const handleMouseEnter = () => {
     setDropdownOpen(true);
@@ -14,78 +26,47 @@ export const Categories = () => {
 
   return (
     <div
-      className={`dropdown me-3 d-none d-lg-block ${
-        dropdownOpen ? "show" : ""
-      }`}
+      className={`dropdown ${dropdownOpen ? "show" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <button
-        className="btn btn-primary px-6"
+        className="btn btn-primary dropdown-toggle"
         type="button"
-        id="dropdownMenuButton1"
+        id="dropdownMenuButton"
         aria-expanded={dropdownOpen}
       >
-        <span className="me-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-grid"
-          >
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
-          </svg>
-        </span>
-        All Departments
+        Categories
       </button>
       <ul
         className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}
-        aria-labelledby="dropdownMenuButton1"
+        aria-labelledby="dropdownMenuButton"
       >
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Dairy, Bread & Eggs
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Snacks & Munchies
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Fruits & Vegetables
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Cold Drinks & Juices
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Breakfast & Instant Food
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Bakery & Biscuits
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="pages/shop-grid.html">
-            Chicken, Meat & Fish
-          </a>
-        </li>
+        {categories.length > 0 ? (
+          categories.map((category) => (
+            <li key={category.id} className="dropdown-item dropdown-submenu">
+              <Link to={`/category/${category.id}`} className="dropdown-link">
+                {category.category_name}
+              </Link>
+              {category.children && category.children.length > 0 && (
+                <ul className="dropdown-menu">
+                  {category.children.map((subCategory) => (
+                    <li key={subCategory.id} className="dropdown-item">
+                      <Link
+                        to={`/category/${subCategory.id}`}
+                        className="dropdown-link"
+                      >
+                        {subCategory.category_name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        ) : (
+          <li className="dropdown-item">Loading...</li>
+        )}
       </ul>
     </div>
   );

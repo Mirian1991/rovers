@@ -155,4 +155,42 @@ cursor: pointer;
 }
 
 
+/* categories */
+
+/* Additional styles if needed */
+
+/* Ensure dropdown menu is properly styled */
+.dropdown-menu {
+  min-width: 200px; /* Adjust as necessary */
+}
+
+/* Style for nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%; /* Position submenu to the right of the parent */
+  top: 0;
+  margin-top: -1px; /* Align with the parent */
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block; /* Show submenu on hover */
+}
+
+/* Adjust padding if needed */
+.dropdown-item {
+  padding: 10px 15px;
+}
+
+/* Optional: highlight on hover */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+
+
 
