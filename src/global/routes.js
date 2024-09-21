@@ -2,47 +2,48 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Homepage, Notfoundpage, Aboutuspage, Contactuspage, Deliverypage, Helppage, Privecypage, Questionpage,  } from "../pages";
 import {CategoryPage} from"../components/header/headercomponents/CategoryPage" ;
 import { Categories} from "../components/header/headercomponents/Categories";
+import { Wrap } from "../components/WrapperContainer";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage />,
+    element: (<Wrap><Homepage /></Wrap>),
     errorElement: <Notfoundpage />,
   },
   {
     path: "/Aboutus",
-    element: <Aboutuspage />,
+    element: <Wrap><Aboutuspage /></Wrap>,
   },
   {
     path: "/Contactus",
-    element: <Contactuspage />,
+    element: <Wrap><Contactuspage /></Wrap>,
   },
   {
     path: "/Delivery",
-    element: <Deliverypage />,
+    element: <Wrap><Deliverypage /></Wrap>,
   },
   {
     path: "/Help",
-    element: <Helppage />,
+    element: <Wrap><Helppage /></Wrap>,
   },
   {
     path: "/Privecy",
-    element: <Privecypage />,
+    element: <Wrap><Privecypage /></Wrap>,
   },
   {
     path: "/Question",
-    element: <Questionpage />,
+    element: <Wrap><Questionpage /></Wrap>,
   },
 
   {
     path:"/category/:id",
-    element: <CategoryPage />,
+    element: <Wrap><CategoryPage /></Wrap>,
 
   },
 
   {
 
     path:"/categories",
-    element :<Categories/>,
+    element :<Wrap><Categories/></Wrap>,
   },
 ]);

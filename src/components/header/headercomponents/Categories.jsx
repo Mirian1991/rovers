@@ -6,6 +6,14 @@ export const Categories = () => {
   const [categories, setCategories] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
+
   useEffect(() => {
     // Fetch categories data from the API
     fetch("https://mysneakers.ge/adminold/get_categories.php")
@@ -15,14 +23,6 @@ export const Categories = () => {
       })
       .catch((error) => console.error("Error fetching categories:", error));
   }, []);
-
-  const handleMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownOpen(false);
-  };
 
   return (
     <div
@@ -48,20 +48,22 @@ export const Categories = () => {
               <Link to={`/category/${category.id}`} className="dropdown-link">
                 {category.category_name}
               </Link>
-              {category.children && category.children.length > 0 && (
-                <ul className="dropdown-menu">
-                  {category.children.map((subCategory) => (
-                    <li key={subCategory.id} className="dropdown-item">
-                      <Link
-                        to={`/category/${subCategory.id}`}
-                        className="dropdown-link"
-                      >
-                        {subCategory.category_name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {category.children ?
+                category.children.length > 0 && (
+                  <ul className="dropdown-menu">
+                    {category.children.map((subCategory) => (
+                      <li key={subCategory.id} className="dropdown-item">
+                        <Link
+                          to={`/category/${subCategory.id}`}
+                          className="dropdown-link"
+                        >
+                          {subCategory.category_name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )
+                : null}
             </li>
           ))
         ) : (
